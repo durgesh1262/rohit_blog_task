@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks</title>
+</head>
+<body>
+    <table>
+       <thead> 
+            <tr>  
+                <th>title</th>
+                <th>slug</th>
+                <th>author</th>
+                <th>content</th>
+                <th>created on</th>
+                <th>status</th>
+            </tr>
+        </thead> 
+        <tbody>
+        <form action="", method='POST'>
+         {% csrf_token %}  
+                {% for i in form %}:
+                <tr>
+                    <td>{{i.title}}</td>
+                    <td>{{i.slug }}</td>
+                    <td>{{i.author}}</td>
+                    <td>{{i.updated_on}}</td>
+                    <td>{{i.content}}</td>
+                    <td>{{i.created_on}}</td>
+                    <td>{{i.status}}</td>
+                    <td><button>delete</button></td>
+                </tr> 
+                
+                {% endfor %}             
+        </form>
+        </tbody>
+    </table>
+    <a href="{% url 'addnewblog' %}">back to home</a> 
+    
+
+</body>
+</html>
