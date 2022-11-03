@@ -4,7 +4,7 @@ from autoslug import AutoSlugField
 
 class BlogApplicationCreationModel(models.Model):
     title = models.CharField(max_length=100, unique= True)
-    slug = models.SlugField('slug', unique= True)
+    slug = models.SlugField('slug', unique= True, )
     # slug = AutoSlugField(populate_from = 'title',unique= True,null=True, default = None )
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     updated_on = models.DateTimeField(auto_now = True)

@@ -5,7 +5,9 @@ from .models import BlogApplicationCreationModel
 class BlogAppForm(forms.ModelForm):
     class Meta():
         model = BlogApplicationCreationModel
-        # fields = ['title', 'slug', 'status', 'created_on']
-        fields = '__all__'
+        fields = ['title', 'author', 'created_on', 'status', 'content']
+        
+
+        # fields = '__all__'
         
         
